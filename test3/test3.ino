@@ -8,17 +8,38 @@
 //  the received data is just echoed back to the Python program
 
 
-#define enA 9
-#define in1 6
-#define in2 7
+// Left motors
+// Front-left
+#define enA_l 9
+#define in1_l 6
+#define in2_l 7
+
+// Back-left
+#define in3_l
+#define in4_l
+#define enB_l
+
+
+// Right motors
+// Front-right
+#define enA_r
+#define in1_r
+#define in2_r
+
+// Back-right
+#define in3_r
+#define in4_r
+#define enB_r
 
 
 void setup() {
   Serial.begin(115200);
 
-  pinMode(enA, OUTPUT);
-  pinMode(in1, OUTPUT);
-  pinMode(in2, OUTPUT);
+  pinMode(enA_l, OUTPUT); pinMode(in1_l, OUTPUT); pinMode(in2_l, OUTPUT);
+  pinMode(enB_l, OUTPUT); pinMode(in3_l, OUTPUT); pinMode(in4_l, OUTPUT);
+
+  pinMode(enA_r, OUTPUT); pinMode(in1_r, OUTPUT); pinMode(in2_r, OUTPUT);
+  pinMode(enB_r, OUTPUT); pinMode(in3_r, OUTPUT); pinMode(in4_r, OUTPUT);
 
   //Serial.println("<Arduino is ready>>");
 }
